@@ -8,7 +8,7 @@ import axios from 'axios';
 const Reciever = () => {
   let { code } = useParams();
   console.log(code)
-  const socket = io('https://2508hb2q-3000.inc1.devtunnels.ms');
+  const socket = io('https://catchit-keval.onrender.com');
   const [files, setFiles] = useState([])
 
 
@@ -27,7 +27,7 @@ const Reciever = () => {
     });
 
     const getFiles = async () => {
-      const response = await axios.get(`https://2508hb2q-3000.inc1.devtunnels.ms/receive/${code}`)
+      const response = await axios.get(`https://catchit-keval.onrender.com/receive/${code}`)
       console.log(response)
       if (response.status === 200) {
         setFiles(response.data.files);

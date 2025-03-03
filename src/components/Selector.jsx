@@ -6,7 +6,7 @@ import { io } from 'socket.io-client';
 
 
 const Selector = () => {
-    const socket = io('https://2508hb2q-3000.inc1.devtunnels.ms');
+    const socket = io('https://catchit-keval.onrender.com');
     const [code, setCode] = useState();
     const [started, setStarted] = useState(false);
     const [file, setFile] = useState([]);
@@ -40,7 +40,7 @@ const Selector = () => {
 
         setCount((pre) => pre + 1);
         try {
-            const response = await axios.post(`https://2508hb2q-3000.inc1.devtunnels.ms/send-file`, formData, {
+            const response = await axios.post(`https://catchit-keval.onrender.com`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
