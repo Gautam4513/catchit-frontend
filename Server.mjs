@@ -29,7 +29,7 @@ const io = new Server(server, {
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, './public/serverFiles')
+      cb(null, './serverFiles')
     },
     filename: function (req, file, cb) {
       const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9)
