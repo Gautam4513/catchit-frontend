@@ -40,7 +40,7 @@ const Selector = () => {
 
         setCount((pre) => pre + 1);
         try {
-            const response = await axios.post(`https://catchit-keval.onrender.com`, formData, {
+            const response = await axios.post(`https://catchit-keval.onrender.com/send-file`, formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
