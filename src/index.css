@@ -1,0 +1,74 @@
+@import "tailwindcss";
+@media screen and (min-width : 300px){
+  #root{
+    background-image: url('./imgs/home.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  #small-nav{
+    display: block;
+  }
+
+  #big-nav{
+    display:none;
+  }
+
+  #con{
+    display:block;
+  }
+  #bottom{
+    display:none;
+  }
+
+  #top{
+    display:block;
+    margin-top:0px;
+  }
+
+  #top > h1 {
+    margin-top:0px;
+    margin-bottom:30px;
+  }
+  
+  #det1{
+    display:none;
+  }
+
+
+}
+
+@media screen and (min-width: 600px) {
+  #root{
+    background-image: url('./imgs/bighome.png');
+    background-position: center;
+    background-size: cover;
+  }
+
+  #small-nav{
+    display: none;
+  }
+
+  #big-nav{
+    display:flex;
+  }
+
+  #con{
+     display: flex;
+     margin-left:1rem;
+     gap:200px;
+  }
+
+  #bottom{
+    display:block;
+  }
+
+  #top{
+    display:none;
+  }
+
+  #det1{
+    display:block;
+  }
+  
+}
