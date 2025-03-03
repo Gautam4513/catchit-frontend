@@ -6,6 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(),tailwindcss()],
   server: {
-    allowedHosts: "catchit-keval-1.onrender.com",
+    allowedHosts: ["catchit-keval-1.onrender.com"],
   },
 })
