@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const app = express();
 app.use(cors({ 
-    origin: "https://2508hb2q-5173.inc1.devtunnels.ms",
+    origin: "https://catchit-keval-1.onrender.com",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type"]
 }));
@@ -22,7 +22,7 @@ let fileData={}
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: "https://2508hb2q-5173.inc1.devtunnels.ms",
+        origin: "https://catchit-keval-1.onrender.com",
         methods: ["GET", "POST"]
     }
 });
