@@ -80,7 +80,7 @@ const Selector = () => {
                             <h1 className='text-3xl font-semibold w-fit'>Shared Files</h1><span className='text-blue-950 font-[roboto] bg-[#fdc500] px-2 rounded-full' >{count}</span>
                         </div>
                         <div><p className='text-[15px] p-2'>Here is your Share Link. You can share it with others.</p></div>
-                        <div className=''><a href={"https://catchit-keval-1.onrender.com/nearby/" + code} target='_blank' className='font-semibold font-[roboto] text-xl w-auto bg-[#080f27] p-2 rounded-2xl mt-5'>http://localhost:5173/nearby/{code}</a></div>
+                        <div className=''><a href={"https://catchit-keval-1.onrender.com/nearby/" + code} target='_blank' className='font-semibold font-[roboto] text-xl w-auto bg-[#080f27] p-2 rounded-2xl mt-5'>https://catchit-keval-1.onrender.com/nearby/{code}</a></div>
                         <div className='overflow-y-auto h-[150px] mt-5'>
                             <ul className='text-lg mt-3'>{list.map((item, key) => (
                                 <li key={key} className='ml-2'>{item}</li>
