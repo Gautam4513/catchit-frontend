@@ -18,7 +18,6 @@ const Reciever = () => {
     socket.on('file-sent', (data) => {
       console.log("recive");
       const fileData = data.files;
-      console.log(files)
       setFiles((prevFiles) => {
         console.log("junu", prevFiles);
         console.log("navu", fileData)
@@ -30,12 +29,19 @@ const Reciever = () => {
       const response = await axios.get(`https://catchit-keval.onrender.com/receive/${code}`)
       console.log(response)
       if (response.status === 200) {
-        setFiles(response.data.files);
-        console.log(response.data.files)
+        // const fileData= response.data.files
+  
+          setFiles(response.data.files)
+        
+        // setFiles(response.data.files);
+        console.log(files)
       }
     }
     getFiles();
   }, [])
+  useEffect(()=>{
+    console.log(files)
+  },[files])
 
 
 
@@ -57,7 +63,7 @@ const Reciever = () => {
                     <li key={key} className='flex w-[100%] justify-between'>
                       <div className='flex justify-between items-center w-[100%] mb-2'>
                         <span>{file.originalname}</span>
-                        <a href={"." + file.destination + "/" + file.filename} download={"."+"/ "+file.destination + "/" + file.filename} target='_blank'>
+                        <a href={"https://catchit-keval.onrender.com/download/"+file.filename+"/"+file.originalname} download={file.filename} target='_blank' rel='"noopener noreferrer"'>
                         <svg xmlns='http://www.w3.org/2000/svg' fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 w-max">
                           <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
                         </svg>

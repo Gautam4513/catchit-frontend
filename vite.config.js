@@ -8,4 +8,7 @@ export default defineConfig({
   server: {
     allowedHosts: ["catchit-keval-1.onrender.com"],
   },
+  build: {
+    chunkSizeWarningLimit: 1000, // Increase the limit (default is 500 KB)
+  },
 })
